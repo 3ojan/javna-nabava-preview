@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/{username}/entries', [UserController::class, 'showEntries']);
+
+
+//For showing an image
+Route::get('/view-images',[App\Http\Controllers\ImageUploadController::class,'viewImages'])->name('images.view');
