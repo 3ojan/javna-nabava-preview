@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+///images
+//For adding an image
+Route::get('/add-image',[App\Http\Controllers\ImageUploadController::class,'addImage'])->name('images.add');
+//For storing an image
+Route::post('/store-image',[App\Http\Controllers\ImageUploadController::class,'storeImage']);
+///images
